@@ -4,7 +4,7 @@
   "description": "This is a Workshop about Api Testing in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -t"
   },
   "keywords": [
     "api-testing",
@@ -16,6 +16,12 @@
   "devDependencies": {
     "chai": "^4.4.0",
     "mocha": "^10.7.3"
+  },
+  "mocha": {
+    "diff": true,
+    "extension": ["js", "cjs", "mjs"],
+    "package": "./package.json",
+    "tiemout": 5000
   },
   "dependencies": {
     "axios": "^1.7.7"
