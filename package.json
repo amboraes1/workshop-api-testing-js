@@ -31,7 +31,7 @@
       "mjs"
     ],
     "package": "./package.json",
-    "tiemout": 5000
+    "tiemout": "8000"
   },
   "dependencies": {
     "axios": "^1.7.7"
