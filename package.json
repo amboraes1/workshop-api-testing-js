@@ -4,7 +4,8 @@
   "description": "This is a Workshop about Api Testing in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -t 5000 --reporter-options reportDir=report,reportFilename=ApiTesting"
+    "test": "npm run lint && mocha -t 5000 --reporter-options reportDir=report,reportFilename=ApiTesting",
+    "lint": "eslint ./test/**/*.js"
   },
   "keywords": [
     "api-testing",
@@ -15,9 +16,13 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.4.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.30.0",
     "mocha": "^10.7.3",
     "mochawesome": "^7.1.3"
   },
+
   "mocha": {
     "diff": true,
     "extension": [
@@ -26,17 +31,7 @@
       "mjs"
     ],
     "package": "./package.json",
-    "tiemout": "5000",
-    "reporter": "mochawesome",
-    "slow": "75",
-    "watch-files": ["lib/**/*.js", "test/**/*.js"],
-    "watch-ignore": ["lib/vendor"]
-  },
-  "mocha": {
-    "diff": true,
-    "extension": ["js", "cjs", "mjs"],
-    "package": "./package.json",
-    "tiemout": 5000
+    "tiemout": "8000"
   },
   "dependencies": {
     "axios": "^1.7.7"
