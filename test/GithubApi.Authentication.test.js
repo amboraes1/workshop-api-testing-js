@@ -31,7 +31,7 @@ describe("Github Api Test", () => {
         { access_token: process.env.ACCESS_TOKEN },
       );
 
-      expect(response.status).to.equal(StatusCodes.OK);
+      expect(response.status).to.equal(200);
       expect(response.data.description).equal(
         "This is a Workshop about Api Testing in JavaScript",
       );
