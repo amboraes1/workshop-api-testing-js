@@ -67,9 +67,8 @@ describe("Consumiendo Metodos GET", () => {
             (el) => el.name === "README.md",
           );
           expect(readmeFile).to.containSubset(format);
-          // console.log(readmeFile);
         } catch (e) {
-          console.log("fallo");
+          console.log(e);
         }
       });
 

@@ -41,9 +41,8 @@ describe("replace", async () => {
       expect(gist.data.description).to.eql("Promise example");
       expect(gist.data.public).to.be.eql(true);
       expect(gist.data).to.containSubset(gistBody);
-      // console.log(gist.data);
     } catch (e) {
-      console.log("fallo");
+      console.log(e);
     }
   });
 
@@ -51,7 +50,6 @@ describe("replace", async () => {
     try {
       const gistExists = await axios.get(gistUrl);
       expect(gistExists.data).to.not.be.empty;
-      // console.log(gistExists.data);
     } catch (e) {
       console.log(e);
     }
@@ -77,11 +75,8 @@ describe("replace", async () => {
   it("Gist should not exist", async () => {
     try {
       const gistIsDeleted = await axios.get(gistUrl);
-      expect(gistIsDeleted.status).to.equal(404);
-      // console.log(gistUrl);
-      // console.log(gistIsDeleted.data);
     } catch (e) {
-      console.log("fallo");
+      expect(gistIsDeleted.status).to.equal(404);
     }
   });
 });

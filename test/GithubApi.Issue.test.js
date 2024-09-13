@@ -91,7 +91,6 @@ describe("Consuming POST and PATCH", () => {
       modifiedIssue = await axios(request);
       expect(modifiedIssue.data.title).to.eql(issueName);
       expect(modifiedIssue.data.body).to.eql("some body");
-      // console.log(modifiedIssue.data);
     });
   });
 });

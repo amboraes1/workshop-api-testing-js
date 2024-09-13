@@ -11,9 +11,8 @@ describe("replace", () => {
       );
       expect(headResponse.status).to.eql(200);
       expect(headResponse.request.res.responseUrl).to.eq(expectedUrl);
-      // console.log(headResponse.request.res.responseUrl);
     } catch (e) {
-      console.log("fallo", e);
+      console.log(e);
     }
   });
 
@@ -23,7 +22,7 @@ describe("replace", () => {
       expect(getResponse.status).to.eql(200);
       expect(getResponse.request.res.responseUrl).to.eq(expectedUrl);
     } catch (e) {
-      console.log("fallo");
+      console.log(e);
     }
   });
 });

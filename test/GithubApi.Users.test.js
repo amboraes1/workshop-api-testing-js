@@ -8,7 +8,7 @@ describe("Query parameters fr managing amount of results", () => {
       const getUsers = await axios.get(`${baseURL}/users`);
       expect(getUsers.data).to.have.length(30);
     } catch (e) {
-      console.log("fallo");
+      console.log(e);
     }
   });
 
@@ -25,7 +25,7 @@ describe("Query parameters fr managing amount of results", () => {
       const getUsers = await axios(request);
       expect(getUsers.data).to.have.length(10);
     } catch (e) {
-      console.log("fallo");
+      console.log(e);
     }
   });
 
@@ -42,7 +42,7 @@ describe("Query parameters fr managing amount of results", () => {
       const getUsers = await axios(request);
       expect(getUsers.data).to.have.length(100);
     } catch (e) {
-      console.log("fallo");
+      console.log(e);
     }
   });
 });
